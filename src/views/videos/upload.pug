@@ -1,0 +1,21 @@
+extends ../base.pug
+block content 
+    div#recordDiv
+        video#preview
+        div
+            span You can record and upload videos here
+            button#startBtn Start recording
+    if errorMessage
+        h2 #{errorMessage}
+    form(method="POST",enctype="multipart/form-data")
+        label(for="video") Video file 
+        input(type="file",accept="video/*",required,id="video",name="video")
+        label(for="thumb") Thumbnail file
+        input(type="file",accept="image/*",required,id="thumb",name="thumb")
+        input(name="title", placeholder="title",required,type="text",maxLength=80)
+        input(name="description", placeholder="description",required,type="text",minLength=20)
+        input(name="hashtags", placeholder="hashtags, separated by comma",required,type="text")
+        input(type="submit",value="upload!")
+
+block scripts 
+    script(src="/static/js/recorder.js")

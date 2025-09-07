@@ -1,0 +1,27 @@
+.empty__message {
+  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.videos__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 50px;
+}
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  a {
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

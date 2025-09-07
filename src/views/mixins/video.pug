@@ -1,0 +1,10 @@
+mixin video(video)
+    div.video-mixin
+        div.video-mixin__thumbNail(style=`background-image:url('/${video.thumbUrl}');background-size:cover;background-position:center;`)
+        div.video-mixin__data
+            span.video-mixin__title 
+                a(href=`/videos/${video.id}`)=video.title
+            span.video-mixin__owner #{video.owner.name}
+            div.video-mixin__meta 
+                span 조회수 #{video.meta.views}회   ･
+                span    #{video.createdAt.toLocaleDateString("ko-KR")}

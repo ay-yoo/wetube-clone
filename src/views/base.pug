@@ -1,0 +1,18 @@
+include mixins/message
+doctype html
+html(lang = "ko")
+    head
+        title #{pageTitle} | wetube
+        link(rel="stylesheet" href="/static/css/styles.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css")
+    body 
+        if messages.error 
+            +messages("error",messages.error)
+        if messages.info
+            +messages("info",messages.info)
+        include partials/header
+        main
+            block content
+        include partials/footer.pug
+    block scripts
+        script(src="/static/js/main.js")

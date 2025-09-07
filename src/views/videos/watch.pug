@@ -1,0 +1,60 @@
+extends ../base.pug
+block content 
+    div#videoContainer(data-id=video._id)
+        video(src="/"+video.fileUrl, preload="metadata")
+        div#videoControls.videoControls
+            div.videoControls__play 
+                span#play.videoControls__playBtn
+                    i.fas.fa-play 
+                div.videoControls__play 
+                    span#currentTime 00:00:00
+                    span / 
+                    span#totalTime 00:00:00
+            input(type="range",min="0",step="1",value=0)#timeline.videoControls__timeline
+            div.videoControls__volume
+                input(type="range",min="0",max="1",step="0.1",value=0.5)#volume
+                span#mute 
+                    i.fas.fa-volume-up
+            div 
+                span#fullScreen 
+                    i.fas.fa-expand
+    div.video__info
+        span=video.title
+        div.video__info-owner 
+            img(src="/"+video.owner.avatarUrl)
+            span=video.owner.username 
+            #videoEditDelete
+                if String(video.owner._id) === String(loggedInUser._id)
+                    a(href=`/videos/${video.id}/edit`) Edit Video 
+                    a(href=`/videos/${video.id}/delete`) Delete Video 
+        div.video__info-description 
+            div.video__info-description__meta
+                span 조회수 #{video.meta.views}회    
+                span=video.createdAt.toLocaleDateString("ko-KR")
+            span=video.description
+            p=video.hashtags
+
+
+
+    if loggedIn
+        div.video__add-comments 
+            form.video__comment-form#commentForm 
+                img(src="/"+loggedInUser.avatarUrl)
+                textarea(cols="30",rows="10",placeholder="Write a comment!")
+                button 
+                    i.fas.fa-arrow-up
+    div.video__comments
+        ul 
+            each comment in video.comments.reverse()
+                li.video__comment(data-id=comment.id)
+                    i.fas.fa-comment
+                    span #{comment.text}
+                    if String(video.owner._id) === String(loggedInUser._id)
+                        span.fas.fa-solid.fa-ban.delete-message
+
+
+
+
+block scripts 
+    script(src="/static/js/videoPlayer.js")
+    script(src="/static/js/comment.js")

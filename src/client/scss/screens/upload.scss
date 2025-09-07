@@ -1,0 +1,36 @@
+#recordDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 30px;
+    }
+    #startBtn {
+      all: unset;
+      padding: 6px;
+      margin: 30px 0px;
+      border: none;
+      height: 50px;
+      color: white;
+      font-size: 20px;
+      border-radius: 40px;
+      border: 2px solid white;
+      background-color: #2e2e2e;
+    }
+  }
+}
+#preview {
+  border-radius: 20px;
+}
+
+label {
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 0px;
+  margin-left: 5px;
+}

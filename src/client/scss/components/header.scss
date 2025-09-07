@@ -1,0 +1,36 @@
+header {
+  padding: 10px 25px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header__logo {
+    color: $red;
+    font-size: 40px;
+  }
+  .header__btn {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  li {
+    margin: 0px 13px;
+    text-transform: lowercase;
+    font-weight: 700;
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+.header__avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

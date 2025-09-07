@@ -1,0 +1,8 @@
+extends ../base.pug
+block content 
+    h4.pageTitle Edit Video
+    form(method="POST" )
+        input(name="title" placeholder="vid title", value=video.title)
+        input(name="description", placeholder="description",require,type="text",minLength=20, value=video.description)
+        input(name="hashtags", placeholder="hashtags, saparated by comma",require,type="text", value=video.hashtags.join())
+        input(value="Save", type="submit")

@@ -1,0 +1,38 @@
+form {
+  margin-bottom: 30px;
+  max-width: 350px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+input:not(input[type="range"]):not(input[type="submit"]) {
+  all: unset;
+  padding: 15px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  color: white;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+input[type="submit"] {
+  all: unset;
+  padding: 15px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  color: white;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  color: $red;
+  padding: 10px 25px;
+  margin: 10px 0px;
+}

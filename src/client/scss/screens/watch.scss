@@ -1,0 +1,120 @@
+.video__comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  .video__comment {
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    i {
+      margin-right: 10px;
+    }
+    .delete-message {
+      margin-left: auto;
+    }
+  }
+}
+.delete-message:hover {
+  cursor: pointer;
+}
+
+.delete-message:active {
+  color: red;
+}
+#videoContainer video {
+  border-radius: 15px;
+}
+
+.video__info {
+  padding: 30px 20px;
+}
+.video__info > span {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.video__info-owner {
+  margin: 17px 0px;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+.video__info-description {
+  background-color: #2e2e2e;
+  padding: 20px 15px;
+  border-radius: 10px;
+  span {
+    display: inline-block;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+  p {
+    color: #aaaaaa;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .video__info-description__meta {
+    font-weight: bold;
+  }
+}
+.video__add-comments {
+  margin-right: 40px;
+  form {
+    padding-left: 10px;
+    border: none;
+    border-radius: 0%;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    textarea {
+      all: unset;
+      display: block;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+    }
+    button {
+      all: unset;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #aaaaaa;
+      text-align: center;
+    }
+    border-bottom: 1px solid #aaaaaa;
+  }
+}
+
+#videoEditDelete {
+  margin-left: auto;
+  display: flex;
+  a {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+  }
+}
