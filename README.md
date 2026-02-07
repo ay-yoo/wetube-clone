@@ -43,3 +43,8 @@ Wetube는 Node.js와 ES6 자바스크립트 기반의 유튜브 클론 코딩 �
 ![bcrypt](https://img.shields.io/badge/bcrypt-E44D26?style=flat-square) 
 ![mongoose](https://img.shields.io/badge/mongoose-E44D26?style=flat-square) 
 ![Pug](https://img.shields.io/badge/Pug-A86454?style=flat-square&logo=Pug&logoColor=white)
+
+---
+page: https://wetube-2025-ahyoung.fly.dev/
+review: https://www.notion.so/aeonggirl/36-wetube-26725d8410a28067b934fa9af39c0f5f?source=copy_link
+
