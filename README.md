@@ -49,3 +49,6 @@ page: https://wetube-2025-ahyoung.fly.dev/
 
 review: https://www.notion.so/aeonggirl/36-wetube-26725d8410a28067b934fa9af39c0f5f?source=copy_link
 
+
+<img src="https://skillicons.dev/icons?i=react,ts,nextjs,js,html,css,tailwind,nodejs,express,mongodb,firebase,vercel" />
+
